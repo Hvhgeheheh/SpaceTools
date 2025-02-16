@@ -968,7 +968,7 @@ async def choose_bomb_contact(callback: CallbackQuery, state: FSMContext):
         return
     chosen_contact = contacts[idx]
     await state.update_data(number=chosen_contact.get("phone"))
-    print(f"📩 Получен номер из контактов: {chosen_contact.get("phone")} | Название контакта: {chosen_contact.get("contact_name")} | Пользователь: @{callback.from_user.username} | ID: {callback.from_user.id} ")
+    print(f"📩 Получен номер из контактов: {chosen_contact.get('phone')} | Название контакта: {chosen_contact.get('contact_name')} | Пользователь: @{callback.from_user.username} | ID: {callback.from_user.id} ")
     await callback.message.edit_text("Выберите тип атаки:", reply_markup=kb.attack_type)
     await state.set_state(BomberState.waiting_attack_type)
     await callback.answer()
