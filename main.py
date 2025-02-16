@@ -1,7 +1,3 @@
-pip install requirements
-pip install -r requirements.txt
-
-
 #### Основные импорты ####
 
 import asyncio
