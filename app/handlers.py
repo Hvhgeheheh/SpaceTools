@@ -425,7 +425,7 @@ async def async_attacks(user_id, username, number, attack_type, replay, stop_eve
                 del stop_events[user_id]
                 return
 
-            services = urls(number) + feedback_urls(number)
+            services = urls(number)
 
             # Создаем задачи для каждого сервиса
             tasks = [
