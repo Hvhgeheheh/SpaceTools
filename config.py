@@ -1,2 +1,8 @@
-token = 7664546171:AAGzuu_VCtrWEfLfdMmzkDQZ6PCq06yzfRQ
-allowed_user_id = 1213402848
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Загружаем .env
+
+token = os.getenv("TOKEN")  # Получаем токен
+allowed_user_id = set(map(int, filter(None, os.getenv("ALLOWED_USERS", "").split(","))))
+
